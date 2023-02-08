@@ -54,12 +54,11 @@ function calculate(x, y, operation) {
     }
   }
   
+// chains af operationer er muligt fordi  hvert .then kald returnerer et nyt promise med en outcome
+// fra tidligere promise. 
+// Første calculate funktion med result bliver først videre ned i chains som argument
 
-// The chain of operations using the .then syntax is possible because each .then call returns a new
-//  promise that resolves with the result of the previous promise. In this case, the result of the first 
-//  calculate function call is passed as an argument to the next calculate function call, allowing us to 
-//  chain the operations together. The final result is obtained by registering a .then handler for the last
-//   promise in the chain, which logs the result to the console.
+
 
 // The async/await syntax is used to make asynchronous programming in JavaScript easier to read and 
 // write, compared to using promises directly. With the async/await syntax, the code inside an async
