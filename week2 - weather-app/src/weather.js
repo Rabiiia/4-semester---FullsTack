@@ -1,4 +1,4 @@
-// const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+// const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;  // why uncomment this line (index.html)?
 // const {Navigator} = require("node-navigator");
 // const navigator = new Navigator();
 
@@ -43,7 +43,7 @@ function getLocation() {
             navigator.geolocation.getCurrentPosition((position) => {
                // if (err) reject ('location not found')
                console.log(position);
-                resolve(position.coords)
+                resolve(position.coords) // why?
             });
     });
 }
@@ -61,7 +61,7 @@ function getWeather(coords) {
       req.open("GET", url);
       req.onload = function () {
         if (req.status === 200) {
-          resolve(JSON.parse(req.response));
+          resolve(JSON.parse(req.response)); // why?
         } else {
           reject(new Error(req.statusText));
         }
@@ -81,8 +81,9 @@ function getWeather(coords) {
   async function getWeatherByCoordinates() {
     try {
       const data = await getLocation();
-      const response = await getWeather(data);
-      console.log(response);
+      const weather = await getWeather(data);
+      document.getElementById('weather').innerHTML = weather.main.temp;
+      console.log(weather);
     } catch (error) {
       console.error(error);
     }
@@ -92,7 +93,7 @@ function getWeather(coords) {
 
 
 //   b) Now add the following code to the weather.js file:
-document.getElementById('weather').innerHTML = weather.main.temp;
+
 
 
 
