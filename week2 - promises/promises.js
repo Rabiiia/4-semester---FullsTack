@@ -56,7 +56,7 @@ function calculate(x, y, operation) {
   
 // chains af operationer er muligt fordi  hvert .then kald returnerer et nyt promise med en outcome
 // fra tidligere promise. 
-// Første calculate funktion med result bliver først videre ned i chains som argument
+// Første calculate funktion med result bliver ført videre ned i chains som argument
 
 
 

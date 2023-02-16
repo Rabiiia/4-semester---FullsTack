@@ -86,7 +86,8 @@ const persons = [
   { name: 'Jane', age: 30 },
 ];
 
-// 3) Loop through the numbers array and the employee object and print out the values using the propper for loop method. (for-in, for-of)
+// 3) Loop through the numbers array and the employee object and print out the values using 
+//the propper for loop method. (for-in, for-of)
 
 // for of loop
 for (const number of numbers) {

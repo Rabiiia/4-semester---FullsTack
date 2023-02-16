@@ -1,0 +1,2 @@
+import getPeople from "./people";
+
