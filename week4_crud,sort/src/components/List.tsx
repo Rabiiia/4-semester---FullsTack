@@ -6,9 +6,9 @@ interface IProps {
     people: IState["people"]
     setPeople:  React.Dispatch<React.SetStateAction<IState["people"]>>
     updatedPeople: boolean
-    setEditPeople:  React.Dispatch<React.SetStateAction<boolean, number>>
+    // setEditPeople:  React.Dispatch<React.SetStateAction<boolean, number>>
     editPeople: [boolean,number]
-    useSt
+    // useSt
 
 }
   
@@ -52,7 +52,7 @@ const List: React.FC<IProps> = (props: IProps) => {
                 <td>{person.age}</td>
                 <td>{person.occupation}</td>
                 <td>{person.salary}</td>
-                <td><button onClick={(e) => {props.setEditPeople([true, parseInt(e.currentTarget.value)])}} value={person.id}>Edit</button></td>
+                {/* <td><button onClick={(e) => {props.setEditPeople([true, parseInt(e.currentTarget.value)])}} value={person.id}>Edit</button></td> */}
                 {/* <td><button onClick={() => props.editPeople} value={person.id}>Edit</button></td> */}
               </tr>
               //)

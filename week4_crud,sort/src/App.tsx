@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
-import List from './components/List'
+import PersonTable from './components2/PersonTable'
 import CreatePerson from './components/CreatePerson'
 import EditPerson from './components/EditPerson'
+import AddPersonForm from './components2/AddPersonForm'
 
 
 export interface IState {
@@ -16,19 +17,49 @@ export interface IState {
    }[]
  }
 
+ 
+export type Person = {
+  id: number
+  name: string
+  age: number
+  occupation: string
+  salary: number;
+}
+
+
+export const initialState: Person = { id: 0, name: "", age: 0, occupation: "" , salary: 0};
+
 function App() {
-  // const [name, setName] = useState<string>("initial name")
-  const [people, setPeople] = useState<IState["people"]>([]);
-  const [updatedPeople, setUpdatedPeople] = useState<boolean>(false);
-  const [editPeople, setEditPeople] = useState<[boolean, number]>([false, 0]);
+    const [people, setPeople] = useState<Person[]>([]);
+    const [person, setPerson] = useState<Person>(initialState);
+
+      // Get list of people
+      useEffect(() => {
+        fetch("http://localhost:4000/person")
+          .then(response => response.json())
+          .then(json => setPeople(json));
+      }, []);
+
 
   return (
     <div className="App">
-      
-      <List people={people} updatedPeople={updatedPeople} setPeople={setPeople} editPeople={editPeople}/>
+      <div className="container">
+      <h1>CRUD App with Hooks</h1>
+      <div className="flex-row">
+        
+        <div className="flex-large">
+          <h2>Add person form</h2>
+          <AddPersonForm setPeople={setPeople} people={people} person={person} setPerson={setPerson} />
+        </div>
 
-      <CreatePerson people={people} setUpdatePeople={setUpdatedPeople}/>
-      <EditPerson people={people} setEditPeople={setEditPeople} />
+        <div className="flex-large">
+          <h2>Person table</h2>
+          <PersonTable people={people} setPeople={setPeople} setPerson={setPerson}/>
+        </div>
+        
+      </div>
+    </div>
+
 
       {/* <In name={name} setName={setName} />
       <Out name={name} /> */}
@@ -58,6 +89,16 @@ function App() {
 
 export default App;
 
+
+ // const [name, setName] = useState<string>("initial name")
+  // const [people, setPeople] = useState<IState["people"]>([]);
+  // const [updatedPeople, setUpdatedPeople] = useState<boolean>(false);
+  // const [editPeople, setEditPeople] = useState<[boolean, number]>([false, 0]);
+
+    {/* <List people={people} updatedPeople={updatedPeople} setPeople={setPeople} editPeople={editPeople}/>
+
+      <CreatePerson people={people} setUpdatePeople={setUpdatedPeople}/>
+      <EditPerson people={people} setEditPeople={setEditPeople} /> */}
 
 // interface person {
 //   map(args: (item: any) => JSX.Element): import('react').ReactNode;

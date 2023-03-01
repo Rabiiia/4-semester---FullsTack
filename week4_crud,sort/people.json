@@ -69,20 +69,6 @@
       "age": 25,
       "occupation": "Junior Developer",
       "salary": 50000
-    },
-    {
-      "id": 11,
-      "name": "m",
-      "age": 12,
-      "occupation": "m",
-      "salary": 7
-    },
-    {
-      "id": 12,
-      "name": "name",
-      "age": 33,
-      "occupation": "yt",
-      "salary": 44
     }
   ]
 }
