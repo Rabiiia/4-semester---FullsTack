@@ -1,0 +1,24 @@
+[2023-03-08T11:13:40.428] [DEBUG] default - Some debug messages
+[2023-03-08T11:13:40.436] [INFO] default - Some info messages
+[2023-03-08T11:13:40.437] [WARN] default - Some warning messages
+[2023-03-08T11:13:40.438] [ERROR] default - Some error messages
+[2023-03-08T11:13:40.439] [FATAL] default - Some fatal messages
+[2023-03-08T11:13:40.513] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:15:05.355] [DEBUG] default - Some debug messages
+[2023-03-08T11:15:05.367] [INFO] default - Some info messages
+[2023-03-08T11:15:05.369] [WARN] default - Some warning messages
+[2023-03-08T11:15:05.371] [ERROR] default - Some error messages
+[2023-03-08T11:15:05.377] [FATAL] default - Some fatal messages
+[2023-03-08T11:15:05.485] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:16:19.250] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:16:55.990] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:18:15.847] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:18:19.993] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:19:13.640] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:20:17.968] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:23:24.518] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T11:32:29.380] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T12:00:44.264] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T12:50:06.938] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T12:51:11.027] [INFO] default - Server is listening to http://localhost:undefined
+[2023-03-08T12:51:31.329] [INFO] default - Server is listening to http://localhost:undefined
