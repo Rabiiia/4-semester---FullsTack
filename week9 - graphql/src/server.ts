@@ -10,7 +10,7 @@ const resolvers = {
     Query: {
       books: () => books,
     },
-    Mutation: {           //args
+    Mutation: {           //args -s
       addBook: (_parent, {input}, _context) => {
         const book = {
           id: books.length+1,
